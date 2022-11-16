@@ -1,0 +1,8 @@
+version: "3.9.5"
+services:
+  app:
+    build: .
+    command:
+      - unvicorn ingestion.ingestion:app --host 0.0.0.0
+    ports:
+      - "8000:8000"
